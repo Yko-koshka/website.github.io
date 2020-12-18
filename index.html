@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
 
-    <header class="header">
-    </header>
-
+    <mail class="main">
+        <header class="header">
+            <nav class="header__nav">
+                <ul class="header__links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Видео</a></li>
+                    <li><a href="#">фото</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="menu-text">
+                    <span class="menu-text__letter">м</span>
+                    <span class="menu-text__letter">е</span>
+                    <span class="menu-text__letter">н</span>
+                    <span class="menu-text__letter">ю</span>
+                </div>
+            </nav>
+        </header>
+    
+        <section class="slider">
+            <div class="container">
+                <div class="slider__inner">
+                    <div><img src="images/slider/img1.jpg" alt="photo"></div>
+                    <div><img src="images/slider/img2.jpg" alt="photo"></div>
+                    <div><img src="images/slider/img3.jpg" alt="photo"></div>
+                </div>
+            </div>
+        </section>
+    
+        <aside class="aside">
+            <ul class="aside__icons">
+                <li><a href="#"><img class="aside__img" src="images/icons/instagram.svg" alt="Инстаграм"></a> </li>
+                <li><a href="#"><img class="aside__img" src="images/icons/telegram.svg" alt="Телеграм"></a></li>    
+                <li><a href="#"><img class="aside__img" src="images/icons/email.png" alt="Ел. почта"></a></li>
+            </ul>
+        </aside>
+    </mail>
+    
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
     
 </body>

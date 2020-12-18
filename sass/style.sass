@@ -1,0 +1,82 @@
+*
+    box-sizing: border-box
+
+@font-face
+  font-family: 'Good Vibes Pro Regular'
+  src: url('../fonts/GoodVibesPro.eot')
+  src: url('../fonts/GoodVibesPro.eot?#iefix') format("embedded-opentype"),
+  url('../fonts/GoodVibesPro.woff') format("woff"),
+  url('../fonts/GoodVibesPro.ttf') format("truetype")
+  font-weight: normal
+  font-style: normal
+
+body
+    background-color: #FADAD8
+    margin: 0
+    color: #fff
+
+a
+    text-decoration: none
+
+ul
+    list-style-type: none
+    margin: 0;
+    padding: 0;
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+.main
+    display: flex
+    justify-content: space-between
+
+.header
+    position: fixed
+    width: 8%
+    height: 100%
+    left: 0
+    background-color: #D09E88
+    &__links
+        display: none
+
+.menu-text
+    font-family: 'Good Vibes Pro Regular'
+    display: flex
+    flex-direction: column
+    text-align: center
+    position: absolute
+    right: 40%;
+    top: 40%;
+    z-index: 1
+    &__letter
+        text-transform: uppercase
+        font-size: 30px
+        padding-bottom: 20px
+        &:nth-child(4)
+            padding-bottom: 0px
+
+.slider
+    width: 100%
+    margin: 0 auto
+    &__inner
+        width: 100%
+        margin: 0 auto
+
+.aside
+    position: fixed
+    width: 8%
+    height: 100%
+    right: 0
+    background-color: #D09E88
+    cursor: pointer
+    &__icons
+        position: absolute
+        right: 40%;
+        top: 40%;
+        z-index: 1
+    &__img
+        padding-bottom: 20px
+
+
+
