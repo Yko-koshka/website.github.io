@@ -11,7 +11,6 @@
   font-style: normal
 
 body
-    background-color: #FADAD8
     margin: 0
     color: #fff
 
@@ -20,63 +19,36 @@ a
 
 ul
     list-style-type: none
-    margin: 0;
-    padding: 0;
+    margin: 0
+    padding: 0
+
+section, main
+    height: 100vh
 
 .container
     max-width: 1200px
     margin: 0 auto
 
 .main
-    display: flex
-    justify-content: space-between
+    position: relative 
+    background: url(../images/fon.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
 
-.header
-    position: fixed
-    width: 8%
-    height: 100%
-    left: 0
-    background-color: #D09E88
-    &__links
-        display: none
-
-.menu-text
-    font-family: 'Good Vibes Pro Regular'
-    display: flex
-    flex-direction: column
-    text-align: center
+.bg
     position: absolute
-    right: 40%;
-    top: 40%;
-    z-index: 1
-    &__letter
-        text-transform: uppercase
-        font-size: 30px
-        padding-bottom: 20px
-        &:nth-child(4)
-            padding-bottom: 0px
-
-.slider
+    top: 0
+    left: 0
     width: 100%
-    margin: 0 auto
-    &__inner
-        width: 100%
-        margin: 0 auto
-
-.aside
-    position: fixed
-    width: 8%
     height: 100%
-    right: 0
-    background-color: #D09E88
-    cursor: pointer
-    &__icons
-        position: absolute
-        right: 40%;
-        top: 40%;
-        z-index: 1
-    &__img
-        padding-bottom: 20px
+    background-color: rgba(255, 255, 255, 0.3)
+    z-index: -1
+    
+
+.slider__img
+    height: 600px
+    margin-left: 10px
 
 
 
