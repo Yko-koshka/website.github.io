@@ -29,26 +29,50 @@ section, main
     max-width: 1200px
     margin: 0 auto
 
-.main
-    position: relative 
-    background: url(../images/fon.jpg)
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
 
-.bg
+.hover-slider-nav
     position: absolute
     top: 0
     left: 0
+    z-index: 5
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
     width: 100%
     height: 100%
-    background-color: rgba(255, 255, 255, 0.3)
-    z-index: -1
-    
+    background-color: rgba(0, 0, 0, .4)
+    &__item
+        padding: 2vh
+        font-size: 8vh
+        font-weight: bold
+        color: rgba(255, 255, 255, .4)
+        cursor: pointer
+        transition: .2s
+        &--active
+            color: rgba(255, 255, 255, .8)
 
-.slider__img
-    height: 600px
-    margin-left: 10px
-
+.hover-slider
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+    background-color: #000
+    &__item
+        position: absolute
+        top: -2vh
+        left: -2vw
+        width: 104vw
+        height: 104vh
+        opacity: 0
+        transition: .4s linear
+        transform: translateY(-2vh)
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover;
+        &--active
+            opacity: 1
+            transform: translateY(0)
 
 

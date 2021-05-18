@@ -1,60 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <script src="js/jquery.min.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <main class="main">
-        <div class="bg"></div>
-        <header class="header">
-            <nav class="header__nav">
-                <ul class="header__links">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Видео</a></li>
-                    <li><a href="#">фото</a></li>
-                    <li><a href="#">Блог</a></li>
-                    <li><a href="#">Прайс</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-                <div class="menu-text">
-                    <span class="menu-text__letter">м</span>
-                    <span class="menu-text__letter">е</span>
-                    <span class="menu-text__letter">н</span>
-                    <span class="menu-text__letter">ю</span>
-                </div>
-            </nav>
-        </header>
-    
-        <div class="slider">
-                <div class="slider__inner">
-                    <div><img class="slider__img" src="images/slider/img1.jpg" alt="photo"></div>
-                    <div><img class="slider__img" src="images/slider/img2.jpg" alt="photo"></div>
-                    <div><img class="slider__img" src="images/slider/img3.jpeg" alt="photo"></div>
-                    <div><img class="slider__img" src="images/slider/img4.jpg" alt="photo"></div>
-                    <div><img class="slider__img" src="images/slider/img5.jpg" alt="photo"></div>
-                    <div><img class="slider__img" src="images/slider/img6.jpg" alt="photo"></div>
-                    <div><img class="slider__img" src="images/slider/img7.jpg" alt="photo"></div>
-                    <div><img class="slider__img" src="images/slider/img8.jpg" alt="photo"></div>
-                </div>
-        </div>
+      <!-- <header class="header">
+        <nav class="header__nav">
+          <ul class="header__links">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Видео</a></li>
+            <li><a href="#">фото</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Прайс</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <div class="menu-text">
+            <span class="menu-text__letter">м</span>
+            <span class="menu-text__letter">е</span>
+            <span class="menu-text__letter">н</span>
+            <span class="menu-text__letter">ю</span>
+          </div>
+        </nav>
+      </header> -->
+
+    <ul class="hover-slider-nav">
+        <li class="hover-slider-nav__item">slider 1</li>
+        <li class="hover-slider-nav__item">slider 2</li>
+        <li class="hover-slider-nav__item">slider 3</li>
+        <li class="hover-slider-nav__item">slider 4</li>
+        <li class="hover-slider-nav__item">slider 5</li>
+        <li class="hover-slider-nav__item">slider 6</li>
+        <li class="hover-slider-nav__item">slider 7</li>
+    </ul>
+
+    <ul class="hover-slider">
+        <li class="hover-slider__item"><img class="hover-slider__item-img" src="images/slider/img1.jpg" alt="photo" /></li>
+        <li class="hover-slider__item"><img class="hover-slider__item-img" src="images/slider/img2.jpg" alt="photo" /></li>
+        <li class="hover-slider__item"><img class="hover-slider__item-img" src="images/slider/img3.jpg" alt="photo" /></li>
+        <li class="hover-slider__item"><img class="hover-slider__item-img" src="images/slider/img7.jpg" alt="photo" /></li>
+        <li class="hover-slider__item"><img class="hover-slider__item-img" src="images/slider/img8.jpg" alt="photo" /></li>
+        <li class="hover-slider__item"><img class="hover-slider__item-img" src="images/slider/img9.jpg" alt="photo" /></li>
+        <li class="hover-slider__item"><img class="hover-slider__item-img" src="images/slider/img10.jpg" alt="photo" /></li>
+    </ul>
+
+      <!--<div class="slider__inner">
+                        <div class="slider-wrapper"><img class="slider__img" src="images/slider/img1.jpg" alt="photo"></div>
+                        <div class="slider-wrapper"><img class="slider__img" src="images/slider/img2.jpg" alt="photo"></div>
+                        <div class="slider-wrapper"><img class="slider__img" src="images/slider/img3.jpg" alt="photo"></div>
+                        <div class="slider-wrapper"><img class="slider__img" src="images/slider/img7.jpg" alt="photo"></div>
+                        <div class="slider-wrapper"><img class="slider__img" src="images/slider/img8.jpg" alt="photo"></div>
+                        <div class="slider-wrapper"><img class="slider__img" src="images/slider/img9.jpg" alt="photo"></div>
+                        <div class="slider-wrapper"><img class="slider__img" src="images/slider/img10.jpg" alt="photo"></div>
+                </div>-->
+        <!--<ol class="slider-indicators">
+                    <li class="slider-indicators__dot"></li>
+                    <li class="slider-indicators__dot"></li>
+                    <li class="slider-indicators__dot"></li>
+                    <li class="slider-indicators__dot"></li>
+                    <li class="slider-indicators__dot"></li>
+                    <li class="slider-indicators__dot"></li>
+                    <li class="slider-indicators__dot"></li>
+                </ol>-->
     </main>
 
     <footer class="footer">
-        <ul class="footer__icons">
-            <li><a href="#"><img class="footer__img" src="images/icons/instagram.svg" alt="Инстаграм"></a> </li>
-            <li><a href="#"><img class="footer__img" src="images/icons/telegram.svg" alt="Телеграм"></a></li>    
-            <li><a href="#"><img class="footer__img" src="images/icons/email.png" alt="Ел. почта"></a></li>
-        </ul>
+      <ul class="footer__icons">
+        <li>
+          <a href="#"
+            ><img
+              class="footer__img"
+              src="images/icons/instagram.svg"
+              alt="Инстаграм"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              class="footer__img"
+              src="images/icons/telegram.svg"
+              alt="Телеграм"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              class="footer__img"
+              src="images/icons/email.png"
+              alt="Ел. почта"
+          /></a>
+        </li>
+      </ul>
     </footer>
-    
-    <script src="js/slick.min.js"></script>
+
     <script src="js/main.js"></script>
-    
-</body>
+  </body>
 </html>
