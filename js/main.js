@@ -1,3 +1,5 @@
+//---------------slider
+
 const sliderItems = [...document.querySelectorAll('.hover-slider__item')];
 const navItems = [...document.querySelectorAll('.hover-slider-nav__link')];
 
@@ -35,22 +37,21 @@ document. querySelector('.hover-slider-nav').addEventListener('mouseover', (even
   }
 });
 
+//-----------gallery
 
-// const sliderInner = document.querySelector('.slider__inner');
-// const imgs = document.querySelectorAll('.slider__img');
-// let index = 0;
+const filterBox = document.querySelectorAll('.box');
 
-// function showSlides(n) {
-//   if (n >= imgs.length) {
-//     index = 0;
-//   }
-//   imgs.forEach((item) => (item.style.display = "none"));
-//   imgs[index].style.display = "block";
-//   index++;
-// }
-// showSlides(index);
+document.querySelector('nav').addEventListener('click', (event) => {
 
-// setInterval(() => {
-//   showSlides(index);
-// }, 2000);
+    if (event.target.tagName !== 'LI') return false;
+    let filterClass = event.target.dataset['f'];
+
+    filterBox.forEach(elem => {
+        elem.classList.remove('hide');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+            elem.classList.add('hide');
+        }
+    });
+
+});
 
