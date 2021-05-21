@@ -39,19 +39,40 @@ document. querySelector('.hover-slider-nav').addEventListener('mouseover', (even
 
 //-----------gallery
 
-const filterBox = document.querySelectorAll('.box');
+function app() {
+  const navLists = document.querySelectorAll('.nav__list');
+  const boxes = document.querySelectorAll('.box');
 
-document.querySelector('nav').addEventListener('click', (event) => {
+  function filter (category, items) {
+    items.forEach((item) => {
+      const isItemFiltered = !item.classList.contains(category);
+      const isShowAll = category.toLowerCase() === 'all'
+      if (isItemFiltered && !isShowAll) {
+        item.classList.add('anime')
+      } else {
+        item.classList.remove('hide')
+        item.classList.remove('anime')
+      }
+    })
+  }
 
-    if (event.target.tagName !== 'LI') return false;
-    let filterClass = event.target.dataset['f'];
+  navLists.forEach((nav__list) => {
+    nav__list.addEventListener('click', () => {
+      const carrentCategory = nav__list.dataset.f
+      filter(carrentCategory, boxes)
+    })
+  })
 
-    filterBox.forEach(elem => {
-        elem.classList.remove('hide');
-        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
-            elem.classList.add('hide');
-        }
-    });
+  boxes.forEach((box) => {
+    box.ontransitionend = function () {
+      if (box.classList.contains('anime')) {
+        box.classList.add('hide')
+      }
+    }
+  })
+}
 
-});
+app()
+
+
 
