@@ -63,3 +63,9 @@ window.onload = ()=>{
     filterImg[i].setAttribute("onclick", "preview(this)");
   }
 }
+
+//video
+
+function videoUrl(item) {
+  document.getElementById("slider-video").src = item;
+}
