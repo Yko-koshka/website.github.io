@@ -31,7 +31,7 @@ const toggleActivity = (index) => {
   }
 };
 
-document. querySelector('.hover-slider-nav').addEventListener('mouseover', (event) => {
+document.querySelector('.hover-slider-nav').addEventListener('mouseover', (event) => {
   if (event.target.classList.contains('hover-slider-nav__link')) {
     toggleActivity(event.target.dataset.index);
   }
@@ -39,40 +39,27 @@ document. querySelector('.hover-slider-nav').addEventListener('mouseover', (even
 
 //-----------gallery
 
-function app() {
-  const navLists = document.querySelectorAll('.nav__list');
-  const boxes = document.querySelectorAll('.box');
-
-  function filter (category, items) {
-    items.forEach((item) => {
-      const isItemFiltered = !item.classList.contains(category);
-      const isShowAll = category.toLowerCase() === 'all'
-      if (isItemFiltered && !isShowAll) {
-        item.classList.add('anime')
-      } else {
-        item.classList.remove('hide')
-        item.classList.remove('anime')
-      }
-    })
-  }
-
-  navLists.forEach((nav__list) => {
-    nav__list.addEventListener('click', () => {
-      const carrentCategory = nav__list.dataset.f
-      filter(carrentCategory, boxes)
-    })
-  })
-
-  boxes.forEach((box) => {
-    box.ontransitionend = function () {
-      if (box.classList.contains('anime')) {
-        box.classList.add('hide')
-      }
+const filterItem = document.querySelector(".nav");
+const filterImg = document.querySelectorAll(".gallery__image");
+window.onload = ()=>{
+  filterItem.onclick = (selectedItem)=>{
+    if(selectedItem.target.classList.contains("nav__item")){
+      filterItem.querySelector(".active").classList.remove("active");
+      selectedItem.target.classList.add("active");
+      let filterName = selectedItem.target.getAttribute("data-name");
+      filterImg.forEach((image) => {
+        let filterImges = image.getAttribute("data-name"); 
+        if((filterImges == filterName) || (filterName == "all")){
+          image.classList.remove("hide");
+          image.classList.add("show");
+        }else{
+          image.classList.add("hide");
+          image.classList.remove("show");
+        }
+      });
     }
-  })
+  }
+  for (let i = 0; i < filterImg.length; i++) {
+    filterImg[i].setAttribute("onclick", "preview(this)");
+  }
 }
-
-app()
-
-
-
