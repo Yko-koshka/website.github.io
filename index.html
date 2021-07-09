@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.min.css" />
     <script src="js/jquery.min.js"></script>
   </head>
@@ -30,7 +29,7 @@
       <div class="container">
         <div class="wrapper">
           <nav class="nav">
-              <button class="nav__item active" data-name="all">All</button>
+              <button class="nav__item active" data-name="all">Все</button>
               <button class="nav__item" data-name="wedding">Свадьба</button>
               <button class="nav__item" data-name="baptism">Крещение</button>
               <button class="nav__item" data-name="birthdays">День рождение</button>
@@ -40,41 +39,60 @@
               <button class="nav__item" data-name="matinee-party">Утренник</button>
           </nav>
           <div class="gallery">
-            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding1.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism1.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays1.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital1.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate1.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation1.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="matinee-party"><div><img class="gallery__img" src="images/gallery/matinee-party/matinee1.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding2.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism2.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays2.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital2.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate2.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation2.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="matinee-party"><div><img class="gallery__img" src="images/gallery/matinee-party/matinee2.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding3.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism3.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays3.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital3.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate3.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation3.jpg" alt=""></div></div>
+            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding1.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism1.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays1.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital1.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate1.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation1.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="matinee-party"><div><img class="gallery__img" src="images/gallery/matinee-party/matinee1.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding2.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism2.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays2.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital2.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate2.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation2.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="matinee-party"><div><img class="gallery__img" src="images/gallery/matinee-party/matinee2.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding3.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism3.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays3.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital3.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate3.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation3.jpg" alt="photo"></div></div>
             <div class="gallery__image" data-name="matinee-party"><div><img class="gallery__img" src="images/gallery/matinee-party/matinee3.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding4.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism4.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays4.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital4.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate4.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation4.jpg" alt=""></div></div>
-            <div class="gallery__image" data-name="matinee-party"><div><img class="gallery__img" src="images/gallery/matinee-party/matinee4.jpg" alt=""></div></div>
+            <div class="gallery__image" data-name="wedding"><div><img class="gallery__img" src="images/gallery/wedding/wedding4.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="baptism"><div><img class="gallery__img" src="images/gallery/baptism/baptism4.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="birthdays"><div><img class="gallery__img" src="images/gallery/birthdays/birthdays4.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="discharge-from-the-hospital"><div><img class="gallery__img" src="images/gallery/discharge-from-the-hospital/hospital4.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="сorporate-party"><div><img class="gallery__img" src="images/gallery/сorporate-party/сorporate4.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="graduation"><div><img class="gallery__img" src="images/gallery/graduation/graduation4.jpg" alt="photo"></div></div>
+            <div class="gallery__image" data-name="matinee-party"><div><img class="gallery__img" src="images/gallery/matinee-party/matinee4.jpg" alt="photo"></div></div>
           </div>
         </div>
     </div>
     </section>
 
+    <section class="transition">
+      <div class="center">
+        <div class="transition-inner">
+          <nav class="transition-nav">
+            <ul class="transition-nav__lists">
+              <li class="transition-nav__list"><a class="transition-nav__link" href="#">Свадьба</a></li>
+              <li class="transition-nav__list"><a class="transition-nav__link" href="#">Крещение</a></li>
+              <li class="transition-nav__list"><a class="transition-nav__link" href="#">День рождение</a></li>
+              <li class="transition-nav__list"><a class="transition-nav__link" href="#">Выписка с роддома</a></li>
+              <li class="transition-nav__list"><a class="transition-nav__link" href="#">Корпоратив</a></li>
+              <li class="transition-nav__list"><a class="transition-nav__link" href="#">Выпускной</a></li>
+              <li class="transition-nav__list"><a class="transition-nav__link" href="#">Утренник</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+    </section>
+
     <section class="video">
-      <video class="video__carousel" id="slider-video" autoplay muted loop>
+      <video class="video__carousel" id="slider-video" autoplay controls>
         <source src="video/v1.mp4" type="video/mp4">
       </video>
       <ul class="video__items">
@@ -85,33 +103,85 @@
       </ul>
     </section>
 
+    <section class="price">
+      <div class="center">
+        <div class="container">
+          <div class="price__inner">
+            <div class="price__info">
+              <h2 class="price__title">Прайс</h2>
+              <p class="price__text">В процессе съемки используется разнообразное оборудование: моноподы, эллектронная стабилизация, слайдер, освещение и т.д. Все для качественной, красивой картинки в фильме. Готовый видео фильм продолжительностью от 1 до 3 часов получает клиент на флеш носитель в оригинальной упаковке. В пунктах (Почасовая съемка) материал записывается на носитель клиента.
+              </p>
+            </div>
+            <div class="price__items">
+              <span class="price__item">Услуга</span>
+              <span class="price__item">Примечания</span>
+              <span class="price__item">Цена</span>
+              <span class="price__item">Качество</span>
+              <span class="price__item">Почасовая видеосъемка</span>
+              <span class="price__item"></span>
+              <span class="price__item">700 грн/час</span>
+              <span class="price__item">Full HD 1920x1080</span>
+              <span class="price__item">2-камерная Почасовая видеосъемка</span>
+              <span class="price__item"></span>
+              <span class="price__item">1200 грн/час</span>
+              <span class="price__item">Full HD 1920x1080</span>
+              <span class="price__item">Видеосъемка 1 день</span>
+              <span class="price__item">Съемочный день 10 часов</span>
+              <span class="price__item">6.000 грн/час</span>
+              <span class="price__item">Full HD 1920x1080</span>
+              <span class="price__item">2-камерная Видеосъемка 1 день</span>
+              <span class="price__item">Съемочный день 10 часов</span>
+              <span class="price__item">8.000 грн/час</span>
+              <span class="price__item">Full HD 1920x1080</span>
+              <span class="price__item">Видеосъемка полный день</span>
+              <span class="price__item">Съемочный день 15 часов</span>
+              <span class="price__item">8.000 грн/час</span>
+              <span class="price__item">Full HD 1920x1080</span>
+              <span class="price__item">2-камерная Видеосъемка полный день</span>
+              <span class="price__item">Съемочный день 15 часов</span>
+              <span class="price__item">10.000 грн/час</span>
+              <span class="price__item">Full HD 1920x1080</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
     <footer class="footer">
-      <ul class="footer__icons">
-        <li>
-          <a href="#"
-            ><img
-              class="footer__img"
-              src="images/icons/instagram.svg"
-              alt="Инстаграм"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              class="footer__img"
-              src="images/icons/telegram.svg"
-              alt="Телеграм"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              class="footer__img"
-              src="images/icons/email.png"
-              alt="Ел. почта"
-          /></a>
-        </li>
-      </ul>
+      <div class="center">
+        <div class="footer__inner">
+          <h3 class="footer__title">Мои контакты</h3>
+          <ul class="footer__icons">
+            <li class="footer__lists">
+              <img
+                  class="footer__img"
+                  src="images/icons/instagram1.svg"
+                  alt="Инстаграм"
+              />
+              <a class="footer__link" href="#">ALEX CINEMA АХТЫРКА</a>
+            </li>
+            <li class="footer__lists">
+              <img
+                  class="footer__img"
+                  src="images/icons/telegram1.svg"
+                  alt="Телеграм"
+              />
+              <a class="footer__link" href="tel:380665737480">+38 (066) 573 74 80</a>
+            </li>
+            <li class="footer__lists">
+              <img
+                  class="footer__img"
+                  src="images/icons/email1.png"
+                  alt="Ел. почта"
+              />
+              <a class="footer__link" href="#">legezaanna7@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
     </footer>
 
     <script src="js/main.js"></script>
