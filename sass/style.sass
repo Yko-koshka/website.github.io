@@ -119,10 +119,6 @@ main, .transition, .price, .footer
       opacity: 1
       transform: translateY(0)
 
-.container
-  max-width: 1200px
-  margin: 50px auto
-
 ::selection
   color: #fff
   background: #007bff
@@ -148,6 +144,58 @@ main, .transition, .price, .footer
   &__item:hover
     color: #fff
     background: #e91e63
+
+@-webkit-keyframes heart-beat
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+  14%
+    -webkit-transform: scale(1.3)
+    transform: scale(1.3)
+
+  28%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+  42%
+    -webkit-transform: scale(1.3)
+    transform: scale(1.3)
+
+  70% 
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+@keyframes heart-beat
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+  14%
+    -webkit-transform: scale(1.3)
+    transform: scale(1.3)
+
+  28%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+  42%
+    -webkit-transform: scale(1.3)
+    transform: scale(1.3)
+
+  70%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+.animate__heart-beat
+  -webkit-animation-name: heart-beat
+  animation-name: heart-beat
+  -webkit-animation-duration: calc(1s * 1.3)
+  animation-duration: calc(1s * 1.3)
+  -webkit-animation-duration: calc(var(--animate-duration) * 1.3)
+  animation-duration: calc(var(--animate-duration) * 1.3)
+  -webkit-animation-timing-function: ease-in-out
+  animation-timing-function: ease-in-out
 
 .gallery
   display: flex
@@ -178,6 +226,66 @@ main, .transition, .price, .footer
   
   100%
     transform: scale(1)
+
+@-webkit-keyframes flip-in-x
+  from
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+    -webkit-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+    opacity: 0
+
+  40%
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+    -webkit-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  60%
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+    opacity: 1
+
+  80%
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+
+  to
+    -webkit-transform: perspective(400px)
+    transform: perspective(400px)
+
+@keyframes flip-in-x
+  from
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
+    -webkit-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+    opacity: 0
+
+  40%
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
+    -webkit-animation-timing-function: ease-in
+    animation-timing-function: ease-in
+
+  60%
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
+    opacity: 1
+
+  80%
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
+
+  to
+    -webkit-transform: perspective(400px)
+    transform: perspective(400px)
+
+.animate__flip-in-x
+  -webkit-backface-visibility: visible !important
+  backface-visibility: visible !important
+  -webkit-animation-name: flip-in-x
+  animation-name: flip-in-x
 
 .video
   position: relative
@@ -251,6 +359,80 @@ main, .transition, .price, .footer
   &__item
     color: #000
 
+.price__inner
+  display: flex
+
+
+.tabs__nav 
+  display: flex
+  flex-direction: column
+
+
+.tabs__btn
+  width: 185px
+  height: 100px
+  padding: 15px 30px
+
+  font-size: 20px
+
+  background-color: #f5f5f5
+  border: 1px solid #e91e6336
+  cursor: pointer
+
+
+.tabs__btn:last-child
+  border-right: none
+
+
+.tabs__btn:hover
+  background-color: #e91e6317
+
+
+.tabs__btn.active 
+  background-color: #e91e63
+  border-right-color: #5e3ddf
+  color: #fff
+
+
+.tabs__content
+  width: 750px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding-left: 30px
+
+.tabs__text
+  padding-bottom: 25px
+  font-size: 40px;
+  color: #000
+
+
+.tabs__item 
+  display: none
+
+
+.tabs__item.active
+  display: flex
+  flex-direction: column
+
+@keyframes fade-in-right
+  from
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+.animate__fade-in-right
+  -webkit-animation-name: fade-in-right
+  animation-name: fade-in-right
+
+
 .footer
   background-image: url(../images/fon/thumb_l_38768.jpg);
   background-position: center;
@@ -258,8 +440,8 @@ main, .transition, .price, .footer
   justify-content: center;
   &__title
     text-align: center
-    margin-bottom: 15px
-    font-size: 36px
+    margin-bottom: 25px
+    font-size: 42px
   &__lists
     display: flex;
     align-items: center;
@@ -267,6 +449,33 @@ main, .transition, .price, .footer
   &__link
     margin-left: 10px
     color: #000
+    font-size: 20px
+
+  @-webkit-keyframes fade-in-down
+  from
+    opacity: 0
+    -webkit-transform: translate3d(0, -100%, 0)
+    transform: translate3d(0, -100%, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@keyframes fade-in-down
+  from
+    opacity: 0
+    -webkit-transform: translate3d(0, -100%, 0)
+    transform: translate3d(0, -100%, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.animate__fade-in-down
+  -webkit-animation-name: fade-in-down
+  animation-name: fade-in-down
 
 
 
