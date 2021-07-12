@@ -64,6 +64,26 @@ window.onload = ()=>{
   }
 }
 
+// Hamburger
+
+window.addEventListener("DOMContentLoaded", () => {
+  const menu = document.getElementById("nav"),
+    menuItems = document.querySelectorAll(".nav__item"),
+    hamburger = document.querySelector(".hamburger");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("hamburger_active");
+    menu.classList.toggle("nav_active");
+  });
+
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      hamburger.classList.toggle("hamburger_active");
+      menu.classList.toggle("nav_active");
+    });
+  });
+});
+
 //video
 
 function videoUrl(item) {
@@ -71,8 +91,8 @@ function videoUrl(item) {
 }
 
 //tabs
-const tabsBtn   = document.querySelectorAll(".tabs__btn");
-const tabsItems = document.querySelectorAll(".tabs__item");
+const tabsBtn   = document.querySelectorAll(".tabs__inner-nav__btn");
+const tabsItems = document.querySelectorAll(".tabs__inner-content__item");
 
 tabsBtn.forEach(onTabClick);
 
@@ -97,7 +117,7 @@ function onTabClick(item) {
     });
 }
 
-document.querySelector('.tabs__btn').click();
+document.querySelector('.tabs__inner-nav__btn').click();
 
 // WOW
 new WOW().init();

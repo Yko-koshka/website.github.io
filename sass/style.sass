@@ -3,48 +3,8 @@
   padding: 0
   box-sizing: border-box
 
-@font-face 
-	font-family: 'Montserrat' 
-	font-style: normal 
-	font-weight: 400 
-	src: local(''),
-      url:('../fonts/montserrat-v15-cyrillic-ext_cyrillic-regular.woff2') format('woff2'), 
-      url('../fonts/montserrat-v15-cyrillic-ext_cyrillic-regular.woff') format('woff') 
-	font-family: 'Montserrat' 
-	font-style: normal 
-	font-weight: 500 
-	src: local(''),
-      url:('../fonts/montserrat-v15-cyrillic-ext_cyrillic-500.woff2') format('woff2'), 
-      url('../fonts/montserrat-v15-cyrillic-ext_cyrillic-500.woff') format('woff') 
-	font-family: 'Montserrat' 
-	font-style: italic 
-	font-weight: 500 
-	src: local(''),
-      url:('../fonts/montserrat-v15-cyrillic-ext_cyrillic-500italic.woff2') format('woff2'), 
-      url('../fonts/montserrat-v15-cyrillic-ext_cyrillic-500italic.woff') format('woff') 
-	font-family: 'Montserrat' 
-	font-style: normal 
-	font-weight: 700 
-	src: local(''),
-      url:('../fonts/montserrat-v15-cyrillic-ext_cyrillic-700.woff2') format('woff2'), 
-      url('../fonts/montserrat-v15-cyrillic-ext_cyrillic-700.woff') format('woff') 
-	font-family: 'Montserrat' 
-	font-style: italic 
-	font-weight: 800 
-	src: local(''),
-      url:('../fonts/montserrat-v15-cyrillic-ext_cyrillic-800italic.woff2') format('woff2'), 
-      url('../fonts/montserrat-v15-cyrillic-ext_cyrillic-800italic.woff') format('woff') 
-	font-family: 'Montserrat' 
-	font-style: normal 
-	font-weight: 800 
-	src: local(''),
-      url:('../fonts/montserrat-v15-cyrillic-ext_cyrillic-800.woff2') format('woff2'), 
-      url('../fonts/montserrat-v15-cyrillic-ext_cyrillic-800.woff') format('woff') 
-
-
-
 body
-  font-family: 'Montserrat'
+  font-family: "Montserrat"
   font-weight: 400
   margin: 0
   color: #5e5e5e
@@ -61,8 +21,8 @@ main, .transition, .price, .footer
   height: 100vh
 
 .center
-  width: 100%
-  height: 100%
+  width: 100%;
+  height: 100%;
   background-color: #ffffffa6
   display: flex;
   align-items: center;
@@ -90,7 +50,6 @@ main, .transition, .price, .footer
     font-size: 8vh
     font-weight: bold
   &__link
-    font-family: 'Montserrat'
     color: rgba(255, 255, 255, .7)
     transition: .2s
     &--active
@@ -101,7 +60,6 @@ main, .transition, .price, .footer
   width: 100%
   height: 100%
   overflow: hidden
-  background-color: #000
   &__item
     position: absolute
     top: -2vh
@@ -145,58 +103,6 @@ main, .transition, .price, .footer
     color: #fff
     background: #e91e63
 
-@-webkit-keyframes heart-beat
-  0%
-    -webkit-transform: scale(1)
-    transform: scale(1)
-
-  14%
-    -webkit-transform: scale(1.3)
-    transform: scale(1.3)
-
-  28%
-    -webkit-transform: scale(1)
-    transform: scale(1)
-
-  42%
-    -webkit-transform: scale(1.3)
-    transform: scale(1.3)
-
-  70% 
-    -webkit-transform: scale(1)
-    transform: scale(1)
-
-@keyframes heart-beat
-  0%
-    -webkit-transform: scale(1)
-    transform: scale(1)
-
-  14%
-    -webkit-transform: scale(1.3)
-    transform: scale(1.3)
-
-  28%
-    -webkit-transform: scale(1)
-    transform: scale(1)
-
-  42%
-    -webkit-transform: scale(1.3)
-    transform: scale(1.3)
-
-  70%
-    -webkit-transform: scale(1)
-    transform: scale(1)
-
-.animate__heart-beat
-  -webkit-animation-name: heart-beat
-  animation-name: heart-beat
-  -webkit-animation-duration: calc(1s * 1.3)
-  animation-duration: calc(1s * 1.3)
-  -webkit-animation-duration: calc(var(--animate-duration) * 1.3)
-  animation-duration: calc(var(--animate-duration) * 1.3)
-  -webkit-animation-timing-function: ease-in-out
-  animation-timing-function: ease-in-out
-
 .gallery
   display: flex
   flex-wrap: wrap
@@ -220,72 +126,8 @@ main, .transition, .price, .footer
   &__img:hover 
     transform: scale(1.1)
 
-@keyframes animate 
-  0%
-    transform: scale(0.5)
-  
-  100%
-    transform: scale(1)
-
-@-webkit-keyframes flip-in-x
-  from
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
-    -webkit-animation-timing-function: ease-in
-    animation-timing-function: ease-in
-    opacity: 0
-
-  40%
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
-    -webkit-animation-timing-function: ease-in
-    animation-timing-function: ease-in
-
-  60%
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
-    opacity: 1
-
-  80%
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
-
-  to
-    -webkit-transform: perspective(400px)
-    transform: perspective(400px)
-
-@keyframes flip-in-x
-  from
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg)
-    -webkit-animation-timing-function: ease-in
-    animation-timing-function: ease-in
-    opacity: 0
-
-  40%
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg)
-    -webkit-animation-timing-function: ease-in
-    animation-timing-function: ease-in
-
-  60%
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg)
-    opacity: 1
-
-  80%
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg)
-
-  to
-    -webkit-transform: perspective(400px)
-    transform: perspective(400px)
-
-.animate__flip-in-x
-  -webkit-backface-visibility: visible !important
-  backface-visibility: visible !important
-  -webkit-animation-name: flip-in-x
-  animation-name: flip-in-x
+.hamburger
+  display: none
 
 .video
   position: relative
@@ -323,98 +165,72 @@ main, .transition, .price, .footer
     width: 200px
 
 .transition
-  background-image: url(../images/fon/1586718254_11-p-krasivie-foni-iz-tsvetov-44.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
+  background-image: url(../images/fon/1586718254_11-p-krasivie-foni-iz-tsvetov-44.jpg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  display: flex
+  align-items: center
   &-nav
     text-align: center
     &__list
-      padding: 2vh;
-      font-size: 6vh;
-      font-weight: bold;
+      padding: 2vh
+      font-size: 6vh
+      font-weight: bold
     &__link
-      color: #585f00;
+      color: #585f00
 
 .price
-  background-image: url(../images/fon/piony-tsvety-lepestki-serdechki.jpg);
-  background-position: center;
-  background-size: cover;
-  justify-content: center;
-  &__info
-    text-align: center
-    padding-bottom: 100px
-  &__title
-    font-size: 58px
-    padding-bottom: 35px
-  &__text
-    font-size: 20px
-  &__items
-    display: grid
-    grid-template-columns: repeat(4, 1fr)
-    justify-items: center
-    gap: 50px
-  &__item
-    color: #000
-
-.price__inner
-  display: flex
-
-
-.tabs__nav 
-  display: flex
-  flex-direction: column
-
-
-.tabs__btn
-  width: 185px
-  height: 100px
-  padding: 15px 30px
-
-  font-size: 20px
-
-  background-color: #f5f5f5
-  border: 1px solid #e91e6336
-  cursor: pointer
-
-
-.tabs__btn:last-child
-  border-right: none
-
-
-.tabs__btn:hover
-  background-color: #e91e6317
-
-
-.tabs__btn.active 
-  background-color: #e91e63
-  border-right-color: #5e3ddf
-  color: #fff
-
-
-.tabs__content
-  width: 750px
-  display: flex
-  flex-direction: column
-  align-items: center
+  background-image: url(../images/fon/piony-tsvety-lepestki-serdechki.jpg)
+  background-position: center
+  background-size: cover
   justify-content: center
-  padding-left: 30px
 
-.tabs__text
-  padding-bottom: 25px
-  font-size: 40px;
-  color: #000
-
-
-.tabs__item 
-  display: none
-
-
-.tabs__item.active
+.tabs__inner
   display: flex
-  flex-direction: column
+  &-nav 
+    display: flex
+    flex-direction: column
+    &__btn
+      width: 185px
+      height: 100px
+      padding: 0 20px
+      font-size: 20px
+      background-color: #f5f5f5
+      border: 1px solid #e91e6336
+      transition: .4s all
+      cursor: pointer
+    &__btn:last-child
+      border-right: none
+    &__btn:hover
+      background-color: #e91e6317
+    &__btn.active 
+      background-color: #e91e63
+      border-right-color: #5e3ddf
+      color: #fff
+  &-content
+    width: 750px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-left: 50px
+    &__item
+      position: absolute
+      opacity: 0
+      transform: scale(0.1)
+      transition: opacity 500ms ease-in-out 0ms,
+      transform 500ms ease-in-out 0ms
+    &__item.active
+      display: flex
+      flex-direction: column
+      opacity: 1 
+      transform: scale(1)
+      
+    &__text
+      padding-bottom: 25px
+      font-size: 40px
+      color: #000
 
 @keyframes fade-in-right
   from
@@ -434,10 +250,10 @@ main, .transition, .price, .footer
 
 
 .footer
-  background-image: url(../images/fon/thumb_l_38768.jpg);
-  background-position: center;
-  background-size: cover;
-  justify-content: center;
+  background-image: url(../images/fon/thumb_l_38768.jpg)
+  background-position: center
+  background-size: cover
+  justify-content: center
   &__title
     text-align: center
     margin-bottom: 25px
@@ -492,6 +308,20 @@ main, .transition, .price, .footer
     &__item:nth-child(n+5)
       margin: 0 10px 0 0
 
+  .wrapper
+    margin: 50px auto
+
+  .tabs__inner-content
+    width: 460px
+
+  .tabs__inner-content__text
+    font-size: 30px
+  
+  .tabs__inner-nav__btn
+    width: 140px
+    height: 72px
+    font-size: 14px
+
 @media (max-width: 970px)
   .nav
     &__item
@@ -500,15 +330,98 @@ main, .transition, .price, .footer
 @media (max-width: 800px)
   .nav
     &__item
-      width: 120px
+      width: 190px
+      height: 36px
+
+  .nav__item
+    padding-left: 0
+    margin: 0 0px 15px 0
+    background-color: #e91e6300
+
+  .nav__item:nth-child(n+5)
+    margin: 0 0px 15px 0
+
+  .nav
+    position: fixed
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    top: 0
+    left: -100%
+    width: 75%
+    height: 100vh
+    background-color: #efe3e1f1
+    transition: 0.6s all
+    z-index: 100;
+
+  .nav_active 
+    left: 0
+
+  .nav:nth-child(1)
+    padding-left: 0
+    font-size: 20px
+
+  .hamburger
+    display: block
+    position: absolute
+    right: 20px
+    transform: translateY(-200%)
+    width: 30px
+    height: 24px
+
+  .hamburger__line
+    display: block
+    height: 3px
+    width: 100%
+    background-color: #eb4d63
+    margin-bottom: 5px
+    transition: 0.5s all
+
+  .hamburger_active .hamburger__line
+    margin-bottom: -3px
+
+  .hamburger_active .hamburger__line:nth-child(1)
+    transform: translateY(3px) rotate(-45deg)
+
+  .hamburger_active .hamburger__line:nth-child(2)
+    display: none
+
+  .hamburger_active .hamburger__line:nth-child(3)
+    transform: translateY(3px) rotate(45deg)
 
   .video__img
     width: 100px
 
+@media (max-width: 650px)
+  .tabs__inner-content
+    width: 160px
+
+  .tabs__inner-content__text
+    font-size: 18px
+  
+  .tabs__inner-nav__btn
+    width: 115px
+    height: 60px
+    font-size: 12px
+
+  .tabs__inner-content
+    padding-left: 12px;
+
+  .footer__title
+    margin-bottom: 20px
+    font-size: 30px
+  
+  .footer__lists
+    margin-bottom: 5px
+
+  .footer__link
+    margin-left: 10px
+    color: #000
+    font-size: 16px
+
 @media (max-width: 560px)
-  .nav
-    &__item
-      width: 100px
+  .transition-nav__list
+    font-size: 4vh
 
   .video__img
     width: 50px
