@@ -77,10 +77,6 @@ main, .transition, .price, .footer
       opacity: 1
       transform: translateY(0)
 
-::selection
-  color: #fff
-  background: #007bff
-
 .wrapper
   margin: 100px auto
   max-width: 1100px
@@ -113,10 +109,6 @@ main, .transition, .price, .footer
     overflow: hidden
   &__image.hide
     display: none
-  &__image.hide
-    display: none
-  &__image.hide
-    display: none
   &__image.show
     animation: animate 0.4s ease
   &__img
@@ -125,6 +117,12 @@ main, .transition, .price, .footer
     transition: all 0.3s ease
   &__img:hover 
     transform: scale(1.1)
+
+@keyframes animate
+  0%
+    transform: scale(0.5)
+  100%
+    transform: scale(1)
 
 .hamburger
   display: none
@@ -150,12 +148,14 @@ main, .transition, .price, .footer
     justify-content: center
     align-items: center
   &__item
-    margin: 0 10px
+    margin-right: 10px
     border-radius: 4px
     background-color: #fff
     padding: 3px 3px 0
     opacity: 0.7
     transition: 0.5s
+  &__item:last-child
+    margin-right: 0
   &__item:hover
     opacity: 1
   &__img
@@ -237,7 +237,6 @@ main, .transition, .price, .footer
     opacity: 0
     -webkit-transform: translate3d(100%, 0, 0)
     transform: translate3d(100%, 0, 0)
-
   to
     opacity: 1
     -webkit-transform: translate3d(0, 0, 0)
@@ -272,7 +271,6 @@ main, .transition, .price, .footer
     opacity: 0
     -webkit-transform: translate3d(0, -100%, 0)
     transform: translate3d(0, -100%, 0)
-
   to
     opacity: 1
     -webkit-transform: translate3d(0, 0, 0)
@@ -283,7 +281,6 @@ main, .transition, .price, .footer
     opacity: 0
     -webkit-transform: translate3d(0, -100%, 0)
     transform: translate3d(0, -100%, 0)
-
   to
     opacity: 1
     -webkit-transform: translate3d(0, 0, 0)
@@ -292,12 +289,6 @@ main, .transition, .price, .footer
 .animate__fade-in-down
   -webkit-animation-name: fade-in-down
   animation-name: fade-in-down
-
-
-
-
-
-
 
 @media (max-width: 1100px)
   .nav
@@ -313,14 +304,12 @@ main, .transition, .price, .footer
 
   .tabs__inner-content
     width: 460px
-
-  .tabs__inner-content__text
-    font-size: 30px
-  
-  .tabs__inner-nav__btn
-    width: 140px
-    height: 72px
-    font-size: 14px
+    &__text
+      font-size: 30px
+    &-nav__btn
+      width: 140px
+      height: 72px
+      font-size: 14px
 
 @media (max-width: 970px)
   .nav
@@ -328,18 +317,12 @@ main, .transition, .price, .footer
       width: 175px
 
 @media (max-width: 800px)
-  .nav
-    &__item
-      width: 190px
-      height: 36px
-
   .nav__item
     padding-left: 0
     margin: 0 0px 15px 0
     background-color: #e91e6300
-
-  .nav__item:nth-child(n+5)
-    margin: 0 0px 15px 0
+    &__item:nth-child(n+5)
+      margin: 0 0px 15px 0
 
   .nav
     position: fixed
@@ -353,13 +336,14 @@ main, .transition, .price, .footer
     background-color: #efe3e1f1
     transition: 0.6s all
     z-index: 100;
-
-  .nav_active 
-    left: 0
-
-  .nav:nth-child(1)
-    padding-left: 0
-    font-size: 20px
+    &:nth-child(1)
+      padding-left: 0
+      font-size: 20px
+    &_active 
+      left: 0
+    &__item
+      width: 190px
+      height: 36px
 
   .hamburger
     display: block
@@ -368,56 +352,47 @@ main, .transition, .price, .footer
     transform: translateY(-200%)
     width: 30px
     height: 24px
-
-  .hamburger__line
-    display: block
-    height: 3px
-    width: 100%
-    background-color: #eb4d63
-    margin-bottom: 5px
-    transition: 0.5s all
-
-  .hamburger_active .hamburger__line
-    margin-bottom: -3px
-
-  .hamburger_active .hamburger__line:nth-child(1)
-    transform: translateY(3px) rotate(-45deg)
-
-  .hamburger_active .hamburger__line:nth-child(2)
-    display: none
-
-  .hamburger_active .hamburger__line:nth-child(3)
-    transform: translateY(3px) rotate(45deg)
+    &__line
+      display: block
+      height: 3px
+      width: 100%
+      background-color: #eb4d63
+      margin-bottom: 5px
+      transition: 0.5s all
+      &_active .hamburger__line
+        margin-bottom: -3px
+      &_active .hamburger__line:nth-child(1)
+        transform: translateY(3px) rotate(-45deg)
+      &_active .hamburger__line:nth-child(2)
+        display: none
+      &_active .hamburger__line:nth-child(3)
+        transform: translateY(3px) rotate(45deg)
 
   .video__img
     width: 100px
 
 @media (max-width: 650px)
   .tabs__inner-content
-    width: 160px
-
-  .tabs__inner-content__text
-    font-size: 18px
-  
-  .tabs__inner-nav__btn
-    width: 115px
-    height: 60px
-    font-size: 12px
-
-  .tabs__inner-content
-    padding-left: 12px;
+    width: 220px
+    padding-left: 20px;
+    &__text
+      font-size: 18px
+    &-nav__btn
+      width: 115px
+      height: 60px
+      font-size: 12px
 
   .footer__title
     margin-bottom: 20px
     font-size: 30px
-  
-  .footer__lists
-    margin-bottom: 5px
+    &__lists
+      margin-bottom: 5px
+    &__link
+      margin-left: 10px
+      color: #000
+      font-size: 16px
 
-  .footer__link
-    margin-left: 10px
-    color: #000
-    font-size: 16px
+  
 
 @media (max-width: 560px)
   .transition-nav__list
@@ -425,6 +400,13 @@ main, .transition, .price, .footer
 
   .video__img
     width: 50px
+
+@media (max-width: 380px)
+  .tabs__inner-content
+    width: 160px
+    padding-left: 12px;
+    &-nav__btn
+      font-size: 12px
 
 
 
